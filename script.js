@@ -15,7 +15,7 @@ async function getUniversity (name,country) {
     // let universityName = data[0].name;
     
     data.forEach(element => {
-        uniData.innerHTML += `<div class="card" style="width: 18rem; padding: 15px">
+        uniData.innerHTML += `<div class="card" style="width: 18rem; padding: 15px; cursor:pointer" onmouseover = "scaleUp(this)" onmouseout = "scaleDown(this)">
         <div class="card-body">
         <h5 class="card-title">${element.name}</h5><br>
         <h6 class="card-subtitle mb-2 text-body-secondary">Country: ${element.country}</h6>
@@ -39,3 +39,12 @@ document.getElementById("search-uni").addEventListener("submit", (e)=> {
     uniData.innerHTML = "";
 })
 
+function scaleUp (x) {
+    x.style.transform = "scale(1.1)";
+    x.style.transition = "0.5s ease";
+}
+
+function scaleDown (x) {
+    x.style.transform = "scale(1)";
+    x.style.transition = "0.5s ease";
+}
