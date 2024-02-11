@@ -1,17 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Arvo', serif;
+}
+
+.content {
+    max-width: 90vw;
+    margin: auto;
 }
 
 #search-uni {
     padding: 20px;
     border: 2px solid red;
-    margin-bottom: 20px;
+    margin: 20px auto;
+    width: 80%;
 }
 
 .uni-data {
     display: none;
     border: 2px solid blue;
+    /* border: 2px solid blue; */
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 25px;
+    margin: auto;
+    width: 80%
 }
