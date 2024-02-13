@@ -14,14 +14,16 @@
         <h1>University on Click</h1>
         <form id="search-uni">
             <label for="uni-name">Enter University Name:</label>
-            <input type="search" name="searcH-name" id="uni-name" placeholder="Search By Name..." required onfocus="enableButton()">
+            <input type="search" name="searcH-name" id="uni-name" placeholder="Search By Name..." required onkeyup="enableButton()">
 
             <label for="uni-country">Enter Country:</label>
-            <input type="search" name="search-country" id="uni-country"  placeholder="Search By Country..." required onfocus="enableButton()">
+            <input type="search" name="search-country" id="uni-country"  placeholder="Search By Country..." required onkeyup="enableButton()">
             <input type="submit" value="Search" id="search" disabled>
         </form>
 
-        <div class="uni-data"></div>
+        <div class="uni-data">
+            <div class="uni-card-data"></div>
+        </div>
     </div>
 
     <script src="script.js"></script>
