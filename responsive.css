@@ -2,7 +2,7 @@
     #search-uni {
         font-size: 17px;
     }
-    
+
     #search-uni input[type=search] {
         width: 220px;
     }
@@ -11,30 +11,45 @@
         padding: 10px 25px;
     }
 }
+
 @media screen and (max-width: 1140px) {
-    .uni-data {
+    .uni-card-data {
         gap: 17px;
+        width: 100%;
     }
+
     .card {
         width: 16.5rem !important;
-    }   
+    }
 }
 
 @media screen and (max-width: 1030px) {
-    .uni-data {
+    .uni-card-data {
         padding: 25px 10px;
-        width: 100%;
+        width: 90%;
         margin: auto;
-        gap: 50px;
+        gap: 51px;
     }
 
     .card {
         width: 19rem !important;
     }
 }
+
 @media screen and (max-width: 950px) {
     #search-uni input[type=search] {
         width: 195px;
+    }
+
+    .uni-card-data {
+        padding: 25px 5px;
+        width: 100%;
+        margin: auto;
+        gap: 25px;
+    }
+    
+    .card {
+        width: 18rem !important;
     }
 }
 
@@ -47,30 +62,41 @@
     #search-uni input[type=search] {
         width: 75%;
     }
-
+    
     .uni-data {
-        gap: 16px;
-        justify-content: space-around;
+        padding: 40px 20px;
     }
+    .uni-card-data {
+        padding: 25px 0px;
+        gap: 15px;
+        margin: auto;
+        /* justify-content: space-around; */
+    }
+
     .card {
         width: 17rem !important;
     }
 }
+
 @media screen and (max-width: 700px) {
     .card {
-        width: 16rem !important;;
+        width: 16rem !important;
+        ;
     }
-        }
-        
-        @media screen and (max-width: 650px) {
-            .uni-data {
-                padding: 25px 20px;
-                gap: 25px;
-            }
+}
 
-            .card {
-                width: 20rem !important;
-                padding: 20px;
-            }
-        }
+@media screen and (max-width: 651px) {
+    .uni-data {
+        padding: 20px;
+    }
+    .uni-card-data {
+        padding: 0;
+        gap: 25px;
+        width: 80%;
+    }
 
+    .card {
+        width: 20rem !important;
+        padding: 20px;
+    }
+}
