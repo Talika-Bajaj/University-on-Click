@@ -4,17 +4,13 @@ let uniName = document.getElementById("uni-name");
 let uniCountry = document.getElementById("uni-country");
 
 
-//use fetch 
-
-// async function getUniversity () {
+// function to fetch api
 async function getUniversity(name, country) {
-
     let response = await fetch("http://universities.hipolabs.com/search?name=" + name + "&country=" + country);
     let data = await response.json();
     console.log(data);
 
     if (data.length > 0) {
-
         data.forEach(element => {
             uniCardData.innerHTML += `<div class="card" style="width: 18rem; padding: 15px; cursor:pointer" onmouseover = "scaleUp(this)" onmouseout = "scaleDown(this)">
                 <div class="card-body">
@@ -24,7 +20,6 @@ async function getUniversity(name, country) {
                 </div>
                 </div>`
         });
-
     } else {
         uniCardData.innerHTML = `<p style= "font-size: 30px">Error: University not found</p>`;
     }
@@ -33,52 +28,38 @@ async function getUniversity(name, country) {
     document.getElementById("uni-country").value = "";
 }
 
+// calling the function
 getUniversity();
 
-
+//event handler for form search button
 document.getElementById("search-uni").addEventListener("submit", (e) => {
     e.preventDefault();
     uniData.style.display = "block";
     uniCardData.style.display = "flex";
-    // uniData.innerHTML = "fkjvnjvnjnjnvjvnivner";
-    getUniversity(uniName.value, uniCountry.value)
+    getUniversity(uniName.value, uniCountry.value);
+
     uniCardData.innerHTML = "";
-    // uniData.style.display = "none";
-    document.getElementById('search').disabled = true; 
+    document.getElementById('search').disabled = true;
 })
 
+//function to zoom-in the card component on hover
 function scaleUp(x) {
     x.style.transform = "scale(1.1)";
     x.style.transition = "0.5s ease";
 }
 
+//function to zoom-out the card component on hover
 function scaleDown(x) {
     x.style.transform = "scale(1)";
     x.style.transition = "0.5s ease";
 }
 
-function enableButton () {
-    if((document.getElementById("uni-name").value!=="")|| (document.getElementById("uni-country").value!=="")) { 
-        document.getElementById('search').disabled = false; 
-    } else { 
+
+//function to disable/enable form search button
+function enableButton() {
+    if ((document.getElementById("uni-name").value !== "") || (document.getElementById("uni-country").value !== "")) {
+        document.getElementById('search').disabled = false;
+    } else {
         document.getElementById('search').disabled = true;
     }
 }
-
-
-
-// function enableNameButton () {
-//     if(document.getElementById("uni-name").value==="") { 
-//         document.getElementById('search').disabled = true; 
-//     } else { 
-//         document.getElementById('search').disabled = false;
-//     }
-// }
-
-// function enableCountryButton () {
-//     if(document.getElementById("uni-country").value==="") { 
-//         document.getElementById('search').disabled = true; 
-//     } else { 
-//         document.getElementById('search').disabled = false;
-//     }
-// }

@@ -1,31 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="responsive.css">
     <title>University on Click</title>
 </head>
+
 <body>
+    <!-- content container -->
     <div class="content">
         <h1>University on Click</h1>
+        <!-- form container -->
         <form id="search-uni">
             <label for="uni-name">Enter University Name:</label>
-            <input type="search" name="searcH-name" id="uni-name" placeholder="Search By Name..."  onkeyup="enableButton()">
-
+            <input type="search" name="searcH-name" id="uni-name" placeholder="Search By Name..."
+                onkeyup="enableButton()">
             <label for="uni-country">Enter Country:</label>
-            <input type="search" name="search-country" id="uni-country"  placeholder="Search By Country..."  onkeyup="enableButton()">
+            <input type="search" name="search-country" id="uni-country" placeholder="Search By Country..."
+                onkeyup="enableButton()">
             <input type="submit" value="Search" id="search" disabled>
         </form>
 
+        <!-- university-data container -->
         <div class="uni-data">
             <div class="uni-card-data"></div>
         </div>
     </div>
 
+    <!-- link to script.js -->
     <script src="script.js"></script>
 </body>
+
 </html>
