@@ -71,3 +71,10 @@ body {
     border-radius: 22px;
     width: 100%
 }
+
+.uni-card-data {
+    gap: 30px;
+    flex-wrap: wrap;
+    width: 86%;
+    margin: auto;
+}
