@@ -44,6 +44,7 @@ document.getElementById("search-uni").addEventListener("submit", (e) => {
     getUniversity(uniName.value, uniCountry.value)
     uniCardData.innerHTML = "";
     // uniData.style.display = "none";
+    document.getElementById('search').disabled = true; 
 })
 
 function scaleUp(x) {
@@ -57,5 +58,27 @@ function scaleDown(x) {
 }
 
 function enableButton () {
-    document.getElementById("search").disabled = false;
+    if((document.getElementById("uni-name").value!=="")|| (document.getElementById("uni-country").value!=="")) { 
+        document.getElementById('search').disabled = false; 
+    } else { 
+        document.getElementById('search').disabled = true;
+    }
 }
+
+
+
+// function enableNameButton () {
+//     if(document.getElementById("uni-name").value==="") { 
+//         document.getElementById('search').disabled = true; 
+//     } else { 
+//         document.getElementById('search').disabled = false;
+//     }
+// }
+
+// function enableCountryButton () {
+//     if(document.getElementById("uni-country").value==="") { 
+//         document.getElementById('search').disabled = true; 
+//     } else { 
+//         document.getElementById('search').disabled = false;
+//     }
+// }
