@@ -1,3 +1,4 @@
+let uniCardData = document.querySelector(".uni-card-data");
 let uniData = document.querySelector(".uni-data");
 let uniName = document.getElementById("uni-name");
 let uniCountry = document.getElementById("uni-country");
@@ -15,7 +16,7 @@ async function getUniversity(name, country) {
     if (data.length > 0) {
 
         data.forEach(element => {
-            uniData.innerHTML += `<div class="card" style="width: 18rem; padding: 15px; cursor:pointer" onmouseover = "scaleUp(this)" onmouseout = "scaleDown(this)">
+            uniCardData.innerHTML += `<div class="card" style="width: 18rem; padding: 15px; cursor:pointer" onmouseover = "scaleUp(this)" onmouseout = "scaleDown(this)">
                 <div class="card-body">
                 <h5 class="card-title">${element.name}</h5><br>
                 <h6 class="card-subtitle mb-2 text-body-secondary">Country: ${element.country}</h6>
@@ -25,7 +26,7 @@ async function getUniversity(name, country) {
         });
 
     } else {
-        uniData.innerHTML = `<p style= "font-size: 30px">Error: University not found</p>`;
+        uniCardData.innerHTML = `<p style= "font-size: 30px">Error: University not found</p>`;
     }
 
     document.getElementById("uni-name").value = "";
@@ -37,10 +38,11 @@ getUniversity();
 
 document.getElementById("search-uni").addEventListener("submit", (e) => {
     e.preventDefault();
-    uniData.style.display = "flex";
+    uniData.style.display = "block";
+    uniCardData.style.display = "flex";
     // uniData.innerHTML = "fkjvnjvnjnjnvjvnivner";
     getUniversity(uniName.value, uniCountry.value)
-    uniData.innerHTML = "";
+    uniCardData.innerHTML = "";
     // uniData.style.display = "none";
 })
 
