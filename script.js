@@ -6,7 +6,7 @@ let uniCountry = document.getElementById("uni-country");
 
 // function to fetch api
 async function getUniversity(name, country) {
-    let response = await fetch("http://universities.hipolabs.com/search?name=" + name + "&country=" + country,   method: "POST", // *GET, POST, PUT, DELETE, etc.
+    let response = await fetch(("http://universities.hipolabs.com/search?name=" + name + "&country=" + country), {  method: "POST", // *GET, POST, PUT, DELETE, etc.
     mode: "cors", // no-cors, *cors, same-origin
     cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
     credentials: "same-origin", // include, *same-origin, omit
