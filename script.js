@@ -6,7 +6,7 @@ let uniCountry = document.getElementById("uni-country");
 
 // function to fetch api
 async function getUniversity(name, country) {
-    let response = await fetch("http://universities.hipolabs.com/search?name=" + name + "&country=" + country);
+    let response = await fetch("https://universities.hipolabs.com/search?name=" + name + "&country=" + country);
     let data = await response.json();
     console.log(data);
 
